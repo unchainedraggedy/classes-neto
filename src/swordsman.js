@@ -1,4 +1,4 @@
-import Character from './index';
+import Character from './character';
 
 export default class Swordsman extends Character {
   constructor(name) {

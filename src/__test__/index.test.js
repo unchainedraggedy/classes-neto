@@ -1,4 +1,4 @@
-import Character from '../index';
+import Character from '../character';
 import Bowman from '../bowman';
 import Swordsman from '../swordsman';
 import Magician from '../magician';
@@ -45,4 +45,22 @@ test('нездоровый зомби', () => {
 test('тест на дэймона', () => {
   const daemon = new Daemon('daemon');
   expect(daemon.level).toBe(1);
+});
+
+test('тест на levelup', () => {
+  const levelUpDaemon = new Daemon('BestDaemon');
+  levelUpDaemon.levelUp();
+  expect(levelUpDaemon.defence).toBe(48);
+});
+
+test('тест на урон', () => {
+  const zomb = new Zombie('Zomb');
+  zomb.damage(2);
+  expect(zomb.health).toBe(98.2);
+});
+
+test('тест на level up мёртвого персонажа', () => {
+  const sword = new Swordsman('Chooi');
+  sword.health = 0;
+  expect(() => sword.levelUp()).toThrow('персонаж мёртв')
 });

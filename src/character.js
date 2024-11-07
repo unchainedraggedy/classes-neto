@@ -4,6 +4,8 @@ export default class Character {
     this.type = type;
     this.health = 100;
     this.level = 1;
+    this.defence = 0;
+    this.attack = 0;
 
     if (typeof name !== 'string' || name.length < 2 || name.length > 10) {
       throw new Error('некорректный ввод');
@@ -13,6 +15,23 @@ export default class Character {
 
     if (!types.includes(type)) {
       throw new Error('недопустимый тип персонажа');
+    }
+  }
+
+  levelUp() {
+    if (this.health === 0) {
+      throw new Error('персонаж мёртв');
+    } else {
+      this.level += 1;
+      this.attack *= 1.2;
+      this.defence *= 1.2;
+      this.health = 100;
+    }
+  }
+
+  damage(points) {
+    if (this.health >= 0) {
+      this.health -= points * (1 - this.defence / 100);
     }
   }
 }
