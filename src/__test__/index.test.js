@@ -21,9 +21,14 @@ test('создание мечника', () => {
  })
 
  test('бессмертный без имени', () => {
-
        expect(() => new Undead(1)).toThrow('некорректный ввод');
  })
+
+ test('бессмертный c атакой 30', () => {
+    const undead = new Undead('Undead');
+    undead.attack = 30;
+    expect(undead.attack).toBe(30)
+})
 
 test('нездоровый зомби', () => {
     const zombak = new Zombie('Zombak');
