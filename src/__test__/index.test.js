@@ -62,5 +62,5 @@ test('тест на урон', () => {
 test('тест на level up мёртвого персонажа', () => {
   const sword = new Swordsman('Chooi');
   sword.health = 0;
-  expect(() => sword.levelUp()).toThrow('персонаж мёртв')
+  expect(() => sword.levelUp()).toThrow('персонаж мёртв');
 });
