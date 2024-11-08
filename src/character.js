@@ -1,12 +1,5 @@
 export default class Character {
   constructor(name, type) {
-    this.name = name;
-    this.type = type;
-    this.health = 100;
-    this.level = 1;
-    this.defence = 0;
-    this.attack = 0;
-
     if (typeof name !== 'string' || name.length < 2 || name.length > 10) {
       throw new Error('некорректный ввод');
     }
@@ -16,6 +9,13 @@ export default class Character {
     if (!types.includes(type)) {
       throw new Error('недопустимый тип персонажа');
     }
+    this.name = name;
+    this.type = type;
+    this.health = 100;
+    this.level = 1;
+    this.defence = null;
+    this.attack = null;
+
   }
 
   levelUp() {
