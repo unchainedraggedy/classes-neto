@@ -5,8 +5,8 @@ test('создание несуществующего персонажа', () =>
 });
 
 test('test damage', () => {
-  const newChar = new Character('Bonch','Bowman');
+  const newChar = new Character('Bonch', 'Bowman');
   newChar.health = 0;
-  newChar.damage(2)
-  expect(newChar.health).toBe(0)
-})
+  newChar.damage(2);
+  expect(newChar.health).toBe(0);
+});
