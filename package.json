@@ -5,25 +5,27 @@
   "scripts": {
     "build": "webpack --mode developoment",
     "lint": "eslint .",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "[![Build status](https://ci.appveyor.com/api/projects/status/y98w62i1v0fcbhhq?svg=true)](https://ci.appveyor.com/project/unchainedraggedy/classes-neto)",
   "devDependencies": {
     "@babel/cli": "^7.25.9",
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
-    "eslint": "^8.57.1",
+    "babel-jest": "^29.7.0",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.31.0",
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
     "appveyor": "^0.4.0",
-    "core-js": "^3.39.0",
-    "webpack": "^5.96.1",
-    "webpack-cli": "^5.1.4"
+    "core-js": "^3.39.0"
   }
 }
